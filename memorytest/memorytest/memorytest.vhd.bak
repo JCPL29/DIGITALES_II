@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity memorytest is
+
+	port(address, data_in : in std_logic_vector (7 downto 0);
+			writen, reset, clock : in std_logic;
+			display_0, display_1, display_2, display_3 : out std_logic_vector (6 downto 0));
+			
+end memorytest;
+
+architecture memorytest_arch of memorytest is
+
+	signal data_out : std_logic_vector (7 downto 0);
+	
+	component memory
+	
+		

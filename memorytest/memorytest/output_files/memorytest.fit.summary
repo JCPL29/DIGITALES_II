@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Nov 10 09:49:46 2022
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : memorytest
+Top-level Entity Name : memorytest
+Family : Cyclone III
+Device : EP3C16F484C6
+Timing Models : Final
+Total logic elements : 2,804 / 15,408 ( 18 % )
+    Total combinational functions : 1,729 / 15,408 ( 11 % )
+    Dedicated logic registers : 2,095 / 15,408 ( 14 % )
+Total registers : 2095
+Total pins : 111 / 347 ( 32 % )
+Total virtual pins : 0
+Total memory bits : 0 / 516,096 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 112 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
