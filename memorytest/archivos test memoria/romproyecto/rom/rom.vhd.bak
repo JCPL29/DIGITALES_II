@@ -1,0 +1,45 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity rom is
+
+port(clock : in std_logic;
+		address : in std_logic_vector (7 downto 0);
+		data_out : out std_logic_vector (7 downto 0));
+		
+end rom;
+
+architecture rom_arch of rom is
+
+	type ROM_type is array (0 to 15) of std_logic_vector (7 downto 0);
+	
+	constant ROM : ROM_type := (0 => x"00",
+										1 => x"11",
+										2 => x"22",
+										3 => x"33",
+										4 => x"44",
+										5 => x"55",
+										6 => x"66",
+										7 => x"77",
+										8 => x"88",
+										9 => x"99",
+										10 => x"AA",
+										11 => x"BB",
+										12 => x"CC",
+										13 => x"DD",
+										14 => x"EE",
+										15 => x"FF");
+										
+	begin
+	
+	memory : process (clock)
+	
+	begin
+	
+		if (clock'event and clock = '1') then
+			data_out <= ROM (to_integer(unsigned(address)));
+		end if;
+	end process;
+	
+end memoriarom_arch;
